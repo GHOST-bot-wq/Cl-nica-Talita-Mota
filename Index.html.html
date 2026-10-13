@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Talita Mota — Fisioterapia Dermatofuncional & Cuidados Estéticos</title>
+    <meta name="description" content="Fisioterapia dermatofuncional, cuidados pré e pós-operatórios de cirurgia plástica, drenagem linfática e depilação a laser com atendimento individualizado e acolhedor.">
+    <meta name="keywords" content="Fisioterapia Dermatofuncional, Drenagem Linfática, Pós-Operatório Cirurgia Plástica, Depilação a Laser, Clínica Talita Mota">
+    
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:title" content="Clínica Talita Mota — Cuidado que valoriza você">
+    <meta property="og:description" content="Fisioterapia dermatofuncional e cuidados estéticos com atenção individualizada e excelência clínica.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        marfim: '#FAF7F2',
+                        areia: '#E9DED2',
+                        'nude-rosa': '#D8B7AA',
+                        'marrom-profundo': '#49372F',
+                        grafite: '#282522',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF7F2; color: #49372F; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-nude-rosa selection:text-marrom-profundo">
+
+    <!-- TOPBAR / HEADER MINIMALISTA -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-marfim/90 backdrop-blur-md border-b border-areia/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-2xl font-bold tracking-tight text-marrom-profundo">CLÍNICA TALITA MOTA</span>
+                <span class="text-[9px] tracking-[0.3em] uppercase text-nude-rosa font-semibold">Fisioterapia Dermatofuncional</span>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-marrom-profundo/80">
+                <a href="#institucional" class="hover:text-nude-rosa transition-colors">A Clínica</a>
+                <a href="#servicos" class="hover:text-nude-rosa transition-colors">Especialidades</a>
+                <a href="#experiencia" class="hover:text-nude-rosa transition-colors">Atendimento</a>
+                <a href="#faq" class="hover:text-nude-rosa transition-colors">Dúvidas</a>
+                <a href="#contato" class="hover:text-nude-rosa transition-colors">Contato</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Conheci%20a%20Cl%C3%ADnica%20Talita%20Mota%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="bg-marrom-profundo hover:bg-grafite text-marfim font-medium px-6 py-3 rounded-full transition-all duration-300 text-xs tracking-wider uppercase shadow-md hover:shadow-lg">
+                   Agende seu atendimento
+                </a>
+            </div>
+
+            <!-- Botão Mobile Menu -->
+            <button id="menu-btn" class="md:hidden text-marrom-profundo text-2xl focus:outline-none" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-marfim border-b border-areia px-6 py-6 space-y-4">
+            <a href="#institucional" class="block text-marrom-profundo hover:text-nude-rosa py-2 text-sm font-medium">A Clínica</a>
+            <a href="#servicos" class="block text-marrom-profundo hover:text-nude-rosa py-2 text-sm font-medium">Especialidades</a>
+            <a href="#experiencia" class="block text-marrom-profundo hover:text-nude-rosa py-2 text-sm font-medium">Atendimento</a>
+            <a href="#faq" class="block text-marrom-profundo hover:text-nude-rosa py-2 text-sm font-medium">Dúvidas</a>
+            <a href="#contato" class="block text-marrom-profundo hover:text-nude-rosa py-2 text-sm font-medium">Contato</a>
+            <div class="pt-4 border-t border-areia">
+                <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Conheci%20a%20Cl%C3%ADnica%20Talita%20Mota%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="block text-center bg-marrom-profundo text-marfim font-medium py-3 rounded-full text-xs uppercase tracking-wider">
+                   Agende seu atendimento
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ETAPA 4 — HERO DE IMPACTO -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 bg-marfim overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Conteúdo Editorial -->
+            <div class="lg:col-span-7 space-y-8 fade-in-up">
+                <div class="inline-flex items-center space-x-3 bg-areia/50 border border-nude-rosa/40 px-4 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-nude-rosa"></span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-marrom-profundo font-semibold">CLÍNICA TALITA MOTA</span>
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-6xl font-normal leading-[1.15] text-marrom-profundo">
+                    Cuidado que valoriza você, <span class="italic font-normal text-nude-rosa">em cada detalhe.</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-marrom-profundo/80 max-w-xl font-light leading-relaxed">
+                    Fisioterapia dermatofuncional e cuidados estéticos com atenção individualizada, acolhimento e absoluto profissionalismo.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-2">
+                    <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Conheci%20a%20Cl%C3%ADnica%20Talita%20Mota%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="bg-marrom-profundo hover:bg-grafite text-marfim font-medium px-8 py-4 text-center rounded-full tracking-wider uppercase text-xs transition-all shadow-lg hover:shadow-xl">
+                        Agende seu atendimento
+                    </a>
+                    <a href="#servicos" class="border border-marrom-profundo/30 hover:border-marrom-profundo text-marrom-profundo px-8 py-4 text-center rounded-full tracking-wider uppercase text-xs transition-all">
+                        Conheça nossos cuidados
+                    </a>
+                </div>
+
+                <!-- Detalhe Visual Editorial -->
+                <div class="pt-8 flex items-center space-x-6 text-xs text-marrom-profundo/60 border-t border-areia">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-sparkles text-nude-rosa"></i>
+                        <span>Atendimento com hora marcada</span>
+                    </div>
+                    <div class="w-1 h-1 rounded-full bg-areia"></div>
+                    <div>Protocolos Personalizados</div>
+                </div>
+            </div>
+
+            <!-- Composição Fotográfica em Destaque -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 aspect-[4/5] bg-areia rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="https://blog.adcosprofissional.com.br/wp-content/uploads/2020/08/dicas-drenagem-linfatica.jpg" 
+                         alt="Atendimento Fisioterapia Dermatofuncional Clínica Talita Mota" 
+                         class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700">
+                </div>
+                <!-- Elemento Decorativo Geométrico -->
+                <div class="absolute -bottom-6 -left-6 w-3/4 h-3/4 bg-nude-rosa/20 rounded-2xl -z-0"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ETAPA 5 — SEÇÃO INSTITUCIONAL -->
+    <section id="institucional" class="py-24 bg-white text-marrom-profundo border-y border-areia/40">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-6 relative order-2 lg:order-1">
+                <div class="aspect-[4/3] bg-areia rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://arquitetodebolso.com.br/wp-content/uploads/2024/02/54590_copy_Unnamed-Space-14.jpeg" 
+                         alt="Ambiente acolhedor e sofisticado da Clínica Talita Mota" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-8 -right-6 bg-marfim border border-areia p-6 rounded-xl shadow-lg hidden sm:block max-w-xs">
+                    <p class="font-serif italic text-sm text-marrom-profundo">"O cuidado com a pele e com a recuperação física deve ser conduzido com empatia e absoluto rigor técnico."</p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+                <span class="text-xs uppercase tracking-[0.3em] text-nude-rosa font-bold">Proposta de Valor</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal leading-tight">
+                    Seu cuidado merece atenção individual.
+                </h2>
+                <p class="text-marrom-profundo/80 leading-relaxed font-light text-base sm:text-lg">
+                    Na Clínica Talita Mota, acreditamos que cada pele e cada corpo possuem necessidades únicas. Nossa prática é pautada na Fisioterapia Dermatofuncional, integrando ciência, acolhimento humanizado e segurança em todos os procedimentos.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-nude-rosa pl-4">
+                        <h3 class="font-serif text-xl font-bold">Biossegurança</h3>
+                        <p class="text-xs text-marrom-profundo/70 mt-1">Ambiente rigorosamente preparado para o seu conforto.</p>
+                    </div>
+                    <div class="border-l-2 border-nude-rosa pl-4">
+                        <h3 class="font-serif text-xl font-bold">Escuta Ativa</h3>
+                        <p class="text-xs text-marrom-profundo/70 mt-1">Avaliação minuciosa antes de qualquer procedimento.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ETAPA 6 — SERVIÇOS E ESPECIALIDADES CONFIRMADAS -->
+    <section id="servicos" class="py-24 bg-marfim">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs uppercase tracking-[0.3em] text-nude-rosa font-bold">Especialidades</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2">
+                    Cuidados Especializados
+                </h2>
+                <p class="text-marrom-profundo/70 mt-4 font-light text-base sm:text-lg">
+                    Conheça os atendimentos oferecidos com foco na saúde da sua pele, bem-estar e reabilitação.
+                </p>
+            </div>
+
+            <div class="space-y-16">
+                
+                <!-- Serviço 1: Fisioterapia Dermatofuncional -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 sm:p-12 rounded-2xl border border-areia shadow-sm">
+                    <div class="lg:col-span-5 aspect-[4/3] rounded-xl overflow-hidden bg-areia">
+                        <img src="https://www.inipe.com.br/wp-content/uploads/2022/01/Fisioterapia-Dermato-Funcional-1024x718.png" 
+                             alt="Fisioterapia Dermatofuncional" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-nude-rosa font-bold">Saúde da Pele</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-semibold">Fisioterapia Dermatofuncional</h3>
+                        <p class="text-marrom-profundo/80 text-sm sm:text-base leading-relaxed font-light">
+                            Tratamentos especializados focados no reestabelecimento da saúde tissular, integridade cutânea e prevenção de alterações estético-funcionais, sempre com respaldo clínico.
+                        </p>
+                        <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Fisioterapia%20Dermatofuncional." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="inline-flex items-center space-x-2 text-xs uppercase tracking-wider font-semibold text-marrom-profundo hover:text-nude-rosa pt-2">
+                            <span>Solicitar informações</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Serviço 2: Cuidados Pré e Pós-Operatórios -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 sm:p-12 rounded-2xl border border-areia shadow-sm">
+                    <div class="lg:col-span-7 space-y-4 order-2 lg:order-1">
+                        <span class="text-xs uppercase tracking-widest text-nude-rosa font-bold">Cirurgia Plástica</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-semibold">Cuidados Pré e Pós-Operatórios</h3>
+                        <p class="text-marrom-profundo/80 text-sm sm:text-base leading-relaxed font-light">
+                            Acompanhamento técnico fundamental para otimizar a cicatrização, prevenir e tratar equimoses, edemas e fibroses decorrentes de intervenções cirúrgicas, sob orientação qualificada.
+                        </p>
+                        <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Cuidados%20P%C3%B3s-Operat%C3%B3rios." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="inline-flex items-center space-x-2 text-xs uppercase tracking-wider font-semibold text-marrom-profundo hover:text-nude-rosa pt-2">
+                            <span>Solicitar informações</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="lg:col-span-5 aspect-[4/3] rounded-xl overflow-hidden bg-areia order-1 lg:order-2">
+                        <img src="https://studiosandramartins.com.br/wp-content/uploads/2025/01/Dia-da-Beleza-com-estetica-facial-em-sua-empresa-brasilia-melhor-tratamento-de-brasilia-sandra-martins-9.jpg" 
+                             alt="Cuidados Pós-Operatórios" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Grid Duplo: Drenagem Linfática & Depilação a Laser -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-2xl border border-areia shadow-sm flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <span class="text-xs uppercase tracking-widest text-nude-rosa font-bold">Circulação & Alívio</span>
+                            <h3 class="font-serif text-2xl font-semibold">Drenagem Linfática Manual</h3>
+                            <p class="text-marrom-profundo/80 text-sm leading-relaxed font-light">
+                                Técnica suave de massagem destinada a estimular o sistema linfático, auxiliando na redução do edema, melhora da circulação e sensação de bem-estar corporal.
+                            </p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Drenagem%20Linf%C3%A1tica." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="text-xs uppercase tracking-wider font-semibold text-marrom-profundo hover:text-nude-rosa flex items-center space-x-2">
+                                <span>Agendar sessão</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-areia shadow-sm flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <span class="text-xs uppercase tracking-widest text-nude-rosa font-bold">Praticidade</span>
+                            <h3 class="font-serif text-2xl font-semibold">Depilação a Laser</h3>
+                            <p class="text-marrom-profundo/80 text-sm leading-relaxed font-light">
+                                Procedimento tecnológico seguro e eficaz para redução duradoura dos pelos, proporcionando conforto, praticidade e cuidados contínuos com a pele.
+                            </p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Depila%C3%A7%C3%A3o%20a%20Laser." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="text-xs uppercase tracking-wider font-semibold text-marrom-profundo hover:text-nude-rosa flex items-center space-x-2">
+                                <span>Consultar pacotes</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ETAPA 8 — EXPERIÊNCIA DE ATENDIMENTO -->
+    <section id="experiencia" class="py-24 bg-areia/40">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.3em] text-nude-rosa font-bold">Simplicidade & Acolhimento</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-normal mt-2">
+                    Como funciona seu atendimento
+                </h2>
+                <p class="text-marrom-profundo/70 text-sm sm:text-base mt-2 font-light">
+                    Três passos simples para iniciar sua jornada de cuidados com a gente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 rounded-2xl border border-areia text-center space-y-4">
+                    <div class="w-12 h-12 bg-marfim rounded-full flex items-center justify-center mx-auto text-nude-rosa font-bold font-serif text-xl border border-areia">1</div>
+                    <h3 class="font-serif text-xl font-semibold">Entre em contato</h3>
+                    <p class="text-xs text-marrom-profundo/70 leading-relaxed font-light">Envie uma mensagem pelo nosso canal oficial no WhatsApp no momento mais conveniente para você.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-areia text-center space-y-4">
+                    <div class="w-12 h-12 bg-marfim rounded-full flex items-center justify-center mx-auto text-nude-rosa font-bold font-serif text-xl border border-areia">2</div>
+                    <h3 class="font-serif text-xl font-semibold">Conte sua necessidade</h3>
+                    <p class="text-xs text-marrom-profundo/70 leading-relaxed font-light">Informe qual procedimento ou cuidado procura para direcionarmos o melhor tipo de avaliação.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-areia text-center space-y-4">
+                    <div class="w-12 h-12 bg-marfim rounded-full flex items-center justify-center mx-auto text-nude-rosa font-bold font-serif text-xl border border-areia">3</div>
+                    <h3 class="font-serif text-xl font-semibold">Agende seu horário</h3>
+                    <p class="text-xs text-marrom-profundo/70 leading-relaxed font-light">Consulte as datas disponíveis e receba todas as orientações prévias da nossa equipe.</p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Conheci%20a%20Cl%C3%ADnica%20Talita%20Mota%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-block bg-marrom-profundo text-marfim font-medium px-8 py-4 rounded-full tracking-wider uppercase text-xs transition-all hover:bg-grafite">
+                    Vamos conversar sobre seu atendimento?
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ETAPA 9 — PERGUNTAS FREQUENTES (CREDIBILIDADE E TRANSPARÊNCIA) -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-[0.3em] text-nude-rosa font-bold">Transparência</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-normal mt-2">Dúvidas Frequentes</h2>
+            </div>
+
+            <div class="space-y-6">
+                
+                <div class="border-b border-areia pb-6">
+                    <h3 class="font-serif text-lg font-semibold mb-2">Quando devo iniciar o acompanhamento pós-operatório?</h3>
+                    <p class="text-marrom-profundo/70 text-sm font-light leading-relaxed">
+                        O momento ideal varia de acordo com a orientação do cirurgião responsável e a técnica cirúrgica empregada. Na consulta inicial de avaliação, analisamos o caso para definir o início seguro.
+                    </p>
+                </div>
+
+                <div class="border-b border-areia pb-6">
+                    <h3 class="font-serif text-lg font-semibold mb-2">Quantas sessões de depilação a laser são necessárias?</h3>
+                    <p class="text-marrom-profundo/70 text-sm font-light leading-relaxed">
+                        A quantidade de sessões depende de fatores individuais, como a área tratada, tom de pele e espessura do pelo. Uma avaliação personalizada indicará o cronograma estimado.
+                    </p>
+                </div>
+
+                <div class="border-b border-areia pb-6">
+                    <h3 class="font-serif text-lg font-semibold mb-2">Os atendimentos são individuais?</h3>
+                    <p class="text-marrom-profundo/70 text-sm font-light leading-relaxed">
+                        Sim. Todos os atendimentos na Clínica Talita Mota são exclusivamente individuais e agendados com antecedência para garantir total privacidade e dedicação ao paciente.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ETAPA 10 — CONTATO & RODAPÉ EDITÁVEL -->
+    <section id="contato" class="py-24 bg-grafite text-marfim">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <div class="space-y-8">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.3em] text-nude-rosa font-bold">Contato Directo</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-2">Agende sua visita</h2>
+                    <p class="text-marfim/70 font-light mt-3 text-sm sm:text-base">
+                        Sinta-se à vontade para tirar suas dúvidas ou agendar um atendimento.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-nude-rosa text-xl mt-1"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-sm">WhatsApp / Atendimento</h3>
+                            <p class="text-marfim/70 text-sm mt-1">(86) 99947-2618</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="text-nude-rosa text-xl mt-1"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h3 class="font-semibold text-sm">Horários de Atendimento</h3>
+                            <p class="text-marfim/70 text-sm mt-1">Mediante agendamento prévio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="https://wa.me/5586999472618?text=Ol%C3%A1!%20Conheci%20a%20Cl%C3%ADnica%20Talita%20Mota%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="inline-block bg-nude-rosa hover:bg-marfim text-marrom-profundo font-semibold px-8 py-4 rounded-full tracking-wider uppercase text-xs transition-all shadow-lg">
+                        Iniciar conversa no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-marrom-profundo/50 p-8 sm:p-12 rounded-2xl border border-white/10 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <h3 class="font-serif text-2xl font-normal">Clínica Talita Mota</h3>
+                    <p class="text-marfim/70 text-xs font-light leading-relaxed">
+                        Fisioterapia Dermatofuncional • Depilação a Laser • Pós-Operatório de Cirurgia Plástica • Drenagem Linfática
+                    </p>
+                </div>
+                <div class="pt-8 border-t border-white/10 mt-8">
+                    <span class="text-[10px] uppercase tracking-widest text-nude-rosa">Atendimento com hora marcada</span>
+                    <p class="text-xs text-marfim/60 mt-1">Sua saúde e beleza cuidadas com acolhimento e profissionalismo.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER COPYRIGHT -->
+    <footer class="bg-grafite border-t border-white/10 py-8 text-center text-xs text-marfim/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>© 2026 Clínica Talita Mota. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE NAVEGAÇÃO E MENU MOBILE -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
